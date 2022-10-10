@@ -14,7 +14,7 @@ myMQTTClient.connect()
 
 def loop():
     while True:
-        time.sleep(.5)
+        time.sleep(5)
         curtem = random.randint(1, 40)
         myMQTTClient.publish(topic="test/HelloWorld", QoS=1, payload='{"Weather":"'+str(curtem)+'"}')
 
